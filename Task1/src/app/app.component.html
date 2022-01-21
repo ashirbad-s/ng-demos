@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<form>
+    <input [(ngModel)]="value" placeholder="Enter the Task" [ngModelOptions]="{standalone:true}">
+    <input type="submit" value="Add Task" [disabled]="!value.trim()" class="btn btn-primary" (click)="Tasks.push(value);value=''">
+    <ul>
+      <li *ngFor = "let task of Tasks; let i=index" (click)="Tasks.splice(i,1)">{{task}}</li>
+    </ul>
+    <button *ngIf=Tasks.length (click)="Tasks=[]" class="btn btn-secondary">Clear the List</button>      
+</form>
