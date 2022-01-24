@@ -1,5 +1,6 @@
 # ST2
 
+This is a Template Driven Form, Date of Making : 18-Jan-22 the styling is not applied properly  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
