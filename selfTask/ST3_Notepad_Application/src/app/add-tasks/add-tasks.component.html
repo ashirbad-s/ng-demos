@@ -1,0 +1,66 @@
+<div class="container-fluid">
+	<hr>
+	
+
+	<div class="container">
+		<form #userForm="ngForm">
+			<div class="form-control">
+				<input 
+				[(ngModel)]="message"
+				placeholder="Add Your Notes Here" 
+				name="message"
+				style="width:75%"
+				#messageCheck="ngModel"
+				autofocus 
+				/>
+				---
+				<input 
+				[(ngModel)]="deadLine"
+				type="date" 
+				[min]="today"
+				[ngModelOptions]="{standalone:true}"
+				placeholder="Deadline"
+				style="width:22%"
+				align="center"
+				#deadLineCheck="ngModel"
+				required
+				/>
+			</div>
+			<br>
+			
+			<button 
+			type="button" 
+			class="btn btn-primary active btn-sm" 
+			*ngIf="message.trim() && deadLineCheck.valid && deadLineCheck.dirty" 
+			(click)="addTask(message.trim(),deadLine)"
+			>
+				Add Task
+			</button> 
+			<div *ngIf="workList.length">
+				<h4>{{todayDate}}</h4>
+				<table width="100%">
+					<tr align="center">
+						<td width="5%"><strong>Sl.No</strong></td>
+						<td><strong>Notes</strong></td>
+						<td width="20%"><strong>Deadline</strong></td>
+					</tr> 
+				</table>	
+			</div>
+			<br>
+			<div *ngFor="let task of workList;let i=index">
+				<app-notes 
+				(sendList)="workList=$event" 
+				[notes]="workList" 
+				[deadLines]="deadLineList"
+				[index]="i">
+				</app-notes>
+			</div>
+			<br>
+			<button *ngIf="workList.length" class="btn btn-danger active btn-sm" (click)="allClear()">All Clear</button>						
+		</form>
+	</div>
+	
+
+	<hr>
+	<button type="button" class="btn btn-primary" routerLink="">Home</button>
+</div>

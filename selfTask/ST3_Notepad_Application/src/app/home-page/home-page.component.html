@@ -1,0 +1,18 @@
+<div *ngIf="!addTask" class = "container-fluid">
+  <h3>Welcome to the Notepad Application !!!!</h3>
+  <strong>Here You Can </strong>
+  <ol>  
+    <li>Add Task</li>
+    <li>Remove Task</li>
+    <li>Make a note of your deadlines</li>
+    <li>Keep the track of dates</li>
+  </ol>
+  <button 
+  (click)="AddTask()" 
+  routerLink="/AddTask" 
+  type="button" 
+  class="btn btn-primary"
+  > 
+    Click Here to Get Started
+  </button>
+</div> 

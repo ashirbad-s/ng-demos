@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <h1>Template Driven Form</h1>
+  <form #form="ngForm">
+    {{form.value | json}}
+    <div class="form-group">
+      <label>Name</label>
+      <input 
+        type="text" 
+        required 
+        class="form-control"
+        ngModel
+        #nameField="ngModel"
+        [class.is-invalid]=nameField.invalid  
+      >
+      {{nameField.invalid}}
+    </div>
+    <div class="form-group">
+      <label>Phone</label>
+      <input 
+        type="tel" 
+        name="phone" 
+        ngModel
+        class="form-control"
+      >
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input 
+        type="email" 
+        name="email" 
+        ngModel 
+        class="form-control">
+
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input 
+        type="number" 
+        name="age" 
+        ngModel 
+        class="form-control"
+          >
+    </div>
+    <div class="form-group">
+      <select class="custom-select" ngModel name="options">
+        <option selected>Select</option>
+        <option *ngFor="let i of list">{{i}}</option>
+      </select> 
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
+

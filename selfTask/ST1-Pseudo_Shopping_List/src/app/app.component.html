@@ -1,0 +1,10 @@
+<div *ngIf="show; else dontShow">
+  Username : 
+  <input [(ngModel)]="usrname" autofocus >
+  <input *ngIf="usrname.trim()" type="Submit" (click)="onClick()">
+</div>  
+  <ng-template #dontShow>
+      <app-first-component [usrnm]="usrname.trim()"></app-first-component>
+  </ng-template>
+<router-outlet></router-outlet>
+  
