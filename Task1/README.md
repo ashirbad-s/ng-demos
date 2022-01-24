@@ -1,5 +1,6 @@
 # Task1
 
+This Task was done for ToDo List. Date of Making - 13-Jan-22. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
