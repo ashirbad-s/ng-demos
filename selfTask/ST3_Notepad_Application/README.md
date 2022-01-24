@@ -1,5 +1,9 @@
 # ST3NotepadApplication
 
+This is a Notepad Application. Date of Making - 17-Jan-22. 
+
+This file is ST3 whereas the Form is ST2 just because of confusion in naming. 
+The number ST2 and ST3 was given later, The Descriptive Name was given first. Therefore, the confusion led to opposite ordering. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server

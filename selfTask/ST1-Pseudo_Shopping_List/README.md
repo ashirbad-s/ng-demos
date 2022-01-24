@@ -1,6 +1,8 @@
 # ST1
 
+This is a Pseudo Shopping List. Date of Creation : 14-Jan-22.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+
 
 ## Development server
 
