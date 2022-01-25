@@ -1,54 +1,14 @@
-import  { Heroes }  from './heroes';
+import { Hero } from './hero';
 
-export const Heroes_Database: Heroes[] =
-[
-    {
-        ID : 11,
-        Name : "Dr. Nice" 
-    },
-
-    {
-        ID : 12,
-        Name : "Narco" 
-    },
-  
-    {
-        ID : 13,
-        Name : "Bombasto" 
-    },
-  
-    {
-       ID : 14,
-        Name : "Celeritas" 
-    },
-  
-    {
-        ID : 15,
-        Name : "Magneta" 
-    },
-  
-    {
-        ID : 16,
-        Name : "Rubber Man" 
-    },
-      
-    {
-        ID : 17,
-        Name : "Dynama" 
-    },
-  
-    {
-        ID : 18,
-        Name : "Dr. IQ" 
-    },
-  
-    {
-        ID : 19,
-        Name : "Magma" 
-    },
-  
-    {
-        ID : 20,
-        Name : "Tornado" 
-    }
+export const HEROES: Hero[] = [
+  { id: 11, name: 'Dr Nice' },
+  { id: 12, name: 'Narco' },
+  { id: 13, name: 'Bombasto' },
+  { id: 14, name: 'Celeritas' },
+  { id: 15, name: 'Magneta' },
+  { id: 16, name: 'RubberMan' },
+  { id: 17, name: 'Dynama' },
+  { id: 18, name: 'Dr IQ' },
+  { id: 19, name: 'Magma' },
+  { id: 20, name: 'Tornado' }
 ];

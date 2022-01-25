@@ -1,5 +1,5 @@
 # HeroesTour
-This is the Tour of Heroes Project from the angular.io task. Created on 24th Jan 2022.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
