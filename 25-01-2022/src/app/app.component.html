@@ -1,0 +1,19 @@
+<div *ngIf="!show">
+  <!--<h1>Ashirbad's Progress [ Angular ]</h1>-->
+  <h2>Works</h2>
+  <div class="tablick">
+    <ul>
+    <button><a routerLink="/Learnings" routerActive="active" (click)="showPage()">Learnings</a></button>
+    <button><a routerLink="/Tasks" routerActive="active" (click)="showPage()">Tasks</a></button>
+    <button><a routerLink="/Self_Tasks" routerActive="active" (click)="showPage()">Self Tasks</a></button>
+    </ul>
+  </div>
+</div>
+<router-outlet *ngIf="show"></router-outlet>
+
+
+<div id="mySidenav" class="sidenav">
+  <a  routerLink="/Learnings" (click)="showPage()">Learnings</a>
+  <a  routerLink="/Tasks" (click)="showPage()">Tasks</a>
+  <a  routerLink="/Self_Tasks" (click)="showPage()">Self Tasks</a>
+</div>

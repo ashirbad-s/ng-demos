@@ -1,0 +1,55 @@
+<div *ngIf="!show">
+	<h1>Learning Dashboard</h1>
+
+	<button routerLink="/Home" class="btn btn-dark">Home</button>
+	<button routerLink="/Tasks" class="btn btn-dark">Tasks</button>
+	<button routerLink="/Self_Tasks" class="btn btn-dark">Self Tasks</button>
+
+	<h3>INDEX</h3>
+	<ol>
+		<li><a routerLink="Basics" (click)="show=!show">Basics</a>
+			<ul>
+				<li>Interpolation</li>
+				<li>Property Binding</li>
+				<li>Class Binding</li>
+				<li>Style Binding</li>
+				<li>Event Binding</li>
+				<li>Template Reference Variables</li>
+				<li>Two Way Binding</li>
+			</ul>
+		</li>
+		<li><a routerLink="Directives" (click)="show=!show">Directives</a>
+			<ul>
+				<li>ngIf</li>
+				<li>ngSwitch</li>
+				<li>ngFor</li>
+			</ul>
+		</li>
+		<li><a routerLink="ComponentInteractions" (click)="show=!show">Component Interaction</a></li>
+		<li><a routerLink="Pipes" (click)="show=!show">Pipes</a></li>
+		<li><a routerLink="Services" (click)="show=!show">Services</a>
+			<ul>
+				<li>Services</li>
+				<li>Dependency Injection</li>
+			</ul>
+		</li>
+		<li><a routerLink="Routing" (click)="show=!show">Routing</a>
+			<ul>
+				<li>Routing and Navigation</li>
+				<li>Wildcard Routing</li>
+				<li>Redirecting Routes</li>
+				<li>Routes Parameters</li>
+				<li>Optional Route Parameters</li>
+				<li>Relative Navigation</li>
+				<li>Child Routes</li>
+			</ul>
+		</li>
+		<li><a routerLink="Forms" (click)="show=!show">Forms</a>
+			<ul>
+				<li>Template Driven Forms</li>
+				<li>Reactive Forms</li>
+			</ul>
+		</li>
+	</ol>
+</div>
+<router-outlet *ngIf="show"></router-outlet>

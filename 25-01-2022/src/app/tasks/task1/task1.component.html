@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<form>
+      <!--[(ngModel)]="lists" this should be inside input to work; Its not getting inside input-->
+      <!--[disabled]="!lists.trim()"--> 
+    
+  <input 
+  [(ngModel)]="lists"
+    placeholder="Enter the Task" 
+    name="list">
+
+  <button 
+  class="btn btn-primary" 
+  (click)="Tasks.push(lists);lists=''">Add Task</button>
+  
+  <ul>
+    <li *ngFor = "let task of Tasks; let i=index" (click)="Tasks.splice(i,1)">{{task}}</li>
+  </ul>
+  <button *ngIf=Tasks.length (click)="Tasks=[]" class="btn btn-secondary">Clear the List</button>      
+</form>

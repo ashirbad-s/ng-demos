@@ -1,0 +1,65 @@
+<div class="container-fluid">
+	<h1>The Basics Works</h1>
+				
+	<div class="container">
+		<h2>
+			<strong>
+				Interpolation
+			</strong>
+		</h2>
+		<blockquote>
+			<h4>My Name is : {{name}}</h4>
+		</blockquote> 
+	</div>
+	
+	<div class="container">
+		<h2>
+			<strong>
+				Two Way Binding
+			</strong>
+		</h2>
+		<input [(ngModel)]="checkList" name="message">
+		<h4 *ngIf="checkList"> The text typed is this  : {{checkList}}</h4>
+	</div>
+
+	<div class="container">
+		<h2>
+			<strong>
+				Class, Event and Property Bindin
+			</strong>
+		</h2>
+		<button
+			(click)="onClick()"
+			type="button"
+			class="btn"
+			[class.btn-danger]="showCollapse">
+			Click Here
+		</button>
+
+		<div *ngIf="showCollapse" >
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+			Soluta voluptates eum, laboriosam adipisci esse et aliquam 
+			facere corporis molestias cumque itaque, eveniet temporibus. 
+			Nam quas, deserunt voluptatibus minima ullam dolores!
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>
+			Template Variable	
+		</h2>
+		<input #tempVar>
+		<input type="submit" value="See" (click)="showTempVar()">
+		<div class="container-fluid" >
+			<div *ngIf="showTemp">
+				<p>The text written is : {{tempVar.value}}</p>
+			</div>
+
+
+		</div>
+
+	</div>
+
+</div>
+<button class="btn btn-primary" (click)="back()">Back</button>
+
