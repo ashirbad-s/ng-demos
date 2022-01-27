@@ -1,3 +1,9 @@
+This is a Master File which contains all the files that have been made by me till now.
+
+25 - 01 - 2022   ----  Learnings/Basics/ -> first part made till now. Problems with routing and form components resolved upto some extent.
+
+
+
 # MainFile
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
