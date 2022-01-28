@@ -1,0 +1,92 @@
+<h1>Login Page</h1>
+<div >
+    <form class="form-group" >
+        
+        <label class="col-xs-3"
+        for="NameField">
+            Name : 
+        </label>
+        <input 
+        type="text" 
+        required
+        name="nameField"
+        id="NameField"
+        placeholder="Enter Your Name"
+        class="form-control"
+        [(ngModel)]="name"
+        #nmfld="ngModel"
+        pattern="[a-zA-Z]+( *.[a-zA-Z]+)*"
+        />
+        
+        <small 
+        class="alert alert-danger" 
+        [hidden]="name || nmfld.untouched">
+            Name is a Required Field
+        </small>
+        <small class="alert alert-danger" [hidden]="nmfld.pristine || nmfld.valid">Space is not allowed in Beginning and End</small>
+
+        
+        <br>
+        
+        <label class="col-xs-3"
+        for="MailField">
+            EMail :
+        </label>
+        <input 
+        type="email"
+        name="mailField"
+        id="MailField"
+        placeholder="Enter Your Email"
+        required
+        ngModel
+        class="form-control"
+        #mail="ngModel"
+        pattern="\w+.@.[a-z]+.\..[a-z]+"
+        />
+        <small class="alert alert-danger" [hidden]="mail.valid||mail.pristine">Enter Valid Email</small>
+        
+        <br>
+        
+        <label class="col-xs-3" 
+            for="PassField">
+            Password :
+        </label>
+        <input 
+        required
+        name="passField"
+        id="PassField"
+        placeholder="Enter Your Password"
+        [(ngModel)]="pass"
+        class="form-control"
+        #ps="ngModel"
+        pattern="((?=\S*\d+)(?=\S*[A-Z]+)(?=\S*[a-z]+)(?=\S+[:!@#$%\^\\])).{7,}"
+        title="Password : Minimum 8 Letters with atleast 1 spl char, 1 number, 1 Uppercase and 1 Lower case alphabet"
+        />
+        <small class="alert alert-danger" [hidden]="ps.untouched || (ps.dirty && ps.valid)">Password Invalid</small>
+          
+        <br>
+    
+        <label class="col-xs-3" for="TelField">
+            Phone :
+        </label>
+        <input 
+        type="tel" 
+        required
+        name="telField"
+        id="TelField"
+        placeholder="Enter Phone Number"
+        [(ngModel)]="tel"
+        pattern=\d.{9}
+        class="form-control"
+        #phone="ngModel"
+        />
+        <small class="alert alert-danger" 
+        [hidden]="phone.valid || phone.pristine">Invalid Phone Number</small>
+    
+    
+        <br>
+        
+        <input type="Submit" value="Submit" class="btn btn-primary" (click)="onClick()" 
+        [disabled]="nmfld.invalid || ps.invalid || phone.invalid || mail.invalid">
+    </form>
+</div>
