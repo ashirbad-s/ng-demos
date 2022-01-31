@@ -1,10 +1,11 @@
 <h1>Login Page</h1>
-<div >
+<div class="design">
+<div class="d-flex justify-content-center" >
     <form class="form-group" >
         
         <label class="col-xs-3"
         for="NameField">
-            Name : 
+            Name: 
         </label>
         <input 
         type="text" 
@@ -15,22 +16,23 @@
         class="form-control"
         [(ngModel)]="name"
         #nmfld="ngModel"
-        pattern="[a-zA-Z]+( *.[a-zA-Z]+)*"
+        pattern="[a-zA-Z]+( {1}.[a-zA-Z]+)*"
+        title="One space between the names is allowed; more is not allowed ; spaces at starting and ending is not allowed"
         />
         
         <small 
-        class="alert alert-danger" 
+        class="text-danger" 
         [hidden]="name || nmfld.untouched">
             Name is a Required Field
         </small>
-        <small class="alert alert-danger" [hidden]="nmfld.pristine || nmfld.valid">Space is not allowed in Beginning and End</small>
+        <small class="text-danger" [hidden]="nmfld.pristine || nmfld.valid">Space is not allowed in Beginning and End.</small>
 
         
         <br>
         
         <label class="col-xs-3"
         for="MailField">
-            EMail :
+            EMail:
         </label>
         <input 
         type="email"
@@ -42,14 +44,15 @@
         class="form-control"
         #mail="ngModel"
         pattern="\w+.@.[a-z]+.\..[a-z]+"
-        />
-        <small class="alert alert-danger" [hidden]="mail.valid||mail.pristine">Enter Valid Email</small>
+        title="abc@xyz.jkl"
+        />      
+        <small class="text-danger" [hidden]="mail.valid||mail.pristine">Enter Valid Email</small>
         
         <br>
         
         <label class="col-xs-3" 
             for="PassField">
-            Password :
+            Password:
         </label>
         <input 
         required
@@ -59,15 +62,15 @@
         [(ngModel)]="pass"
         class="form-control"
         #ps="ngModel"
-        pattern="((?=\S*\d+)(?=\S*[A-Z]+)(?=\S*[a-z]+)(?=\S+[:!@#$%\^\\])).{7,}"
-        title="Password : Minimum 8 Letters with atleast 1 spl char, 1 number, 1 Uppercase and 1 Lower case alphabet"
+        pattern="((?=\S*\d+)(?=\S*[A-Z]+)(?=\S*[a-z]+)(?=\S+[:!@#$%\^\\])).{8}"
+        title="Password: 8 Letters with atleast 1 spl char, 1 number, 1 Uppercase and 1 Lower case alphabet"
         />
-        <small class="alert alert-danger" [hidden]="ps.untouched || (ps.dirty && ps.valid)">Password Invalid</small>
+        <small class="text-danger" [hidden]="ps.untouched || (ps.dirty && ps.valid)">Password Invalid</small>
           
         <br>
     
         <label class="col-xs-3" for="TelField">
-            Phone :
+            Phone:
         </label>
         <input 
         type="tel" 
@@ -79,8 +82,9 @@
         pattern=\d.{9}
         class="form-control"
         #phone="ngModel"
+        title="10 Numbers in the Phone"
         />
-        <small class="alert alert-danger" 
+        <small class="text-danger" 
         [hidden]="phone.valid || phone.pristine">Invalid Phone Number</small>
     
     
@@ -89,4 +93,7 @@
         <input type="Submit" value="Submit" class="btn btn-primary" (click)="onClick()" 
         [disabled]="nmfld.invalid || ps.invalid || phone.invalid || mail.invalid">
     </form>
+
+    <br><br>
+</div>
 </div>
