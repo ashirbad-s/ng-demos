@@ -1,0 +1,99 @@
+<div class="container-fluid border col-md-6">
+    <div class="mb-3">
+        <form class="form-group" [formGroup]="reactiveForm" (ngSubmit)="submitForm()">
+           
+            <div class="form-floating mb-4">
+                <input 
+                id="nameField" 
+                formControlName="usrnm" 
+                class="form-control" 
+                placeholder="Username"
+                [class.is-valid]="usrnm.valid"
+                [class.is-invalid]="usrnm.invalid && usrnm.dirty"
+                title="Username must NOT have multiple spaces and should NOT start or end with a space"
+                />
+                <label for="nameField">Username</label>             
+               
+                <small 
+                class="text-danger" 
+                [hidden]="usrnm.untouched || usrnm.valid"
+                *ngIf="usrnm.errors?.['required']">
+                    Username Required
+                </small>
+               
+                <small 
+                class="text-danger" 
+                
+                *ngIf="usrnm.errors?.['pattern']">
+                    Multiple Spaces, Numbers, Special Characters or Spaces in the Beginning and End not allowed
+                </small>
+            </div>
+        
+                
+            
+            <div class="form-floating mb-4">
+                <input 
+                id="passField" 
+                formControlName="pswd" 
+                class="form-control" 
+                placeholder="Password"
+                [class.is-invalid]="pswd.errors?.['pattern']"
+                [class.is-valid]="pswd.valid && pswd.dirty && pswd.value"/>
+                <label for="passField">Password</label>
+                
+                <small 
+                class="text-danger" 
+                [hidden]="pswd.valid || pswd.pristine">
+                    Invalid Password
+                </small>
+            </div>
+
+
+            <div class="form-floating mb-4">
+                <input 
+                id="phoneField" 
+                formControlName="tel" 
+                class="form-control" 
+                placeholder="Phone Number"
+                [class.is-invalid]="tel.errors?.['pattern']"
+                [class.is-valid]="tel.valid && tel.dirty && tel.value"
+                title="Phone Number must be 10 NUMBERS only"/>
+                <label for="phoneField" >Phone</label>
+                
+                <small
+                class="text-danger"
+                *ngIf="tel.errors?.['pattern']">
+                    Phone Number must be 10 NUMBERS only
+                </small>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input 
+                id="mailField" 
+                formControlName="mail" 
+                class="form-control" 
+                placeholder="EMail"
+                [class.is-invalid]="mail.errors?.['pattern']"
+                [class.is-valid]="mail.valid && mail.dirty && mail.value"/>
+                <label for="mailField">Email</label>
+
+                <small 
+                class="text-danger"
+                *ngIf="mail.errors?.['pattern']"
+                >
+                    EMail is not valid
+                </small>
+            </div>
+        
+            <button 
+            class="btn btn-primary mb-3" 
+            [disabled]="reactiveForm.invalid"
+            [class.disabled]="reactiveForm.invalid"
+            [class.active]="reactiveForm.valid">
+                Submit
+            </button>
+        </form>        
+    </div>
+</div>
+
+
