@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-registration-form',
@@ -7,15 +8,17 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegistrationFormComponent implements OnInit {
 
+  accept=false;
   reactiveForm = this.buildForm.group
   (
     {
-      usrnm:['',[Validators.required,Validators.pattern('[a-zA-Z]+( [a-zA-Z]+)*')]],
-      pswd:['',[Validators.pattern('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8})')]],
+      usrnm:[,[Validators.required,Validators.pattern('[a-zA-Z]+( [a-zA-Z]+)*')]],
+      pswd:[,[Validators.pattern('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8})')]],
       tel:[,[Validators.pattern('[0-9]{10}')]],
-      mail:[,[Validators.pattern('[a-zA-Z\d]+@[a-z]+\.[a-z]+')]]
+      mail:[,[Validators.pattern('[a-zA-Z\d]+@[a-z]+\.[a-z]+')]],
+      aliases: this.buildForm.array([this.buildForm.control('')])
     }
-  )
+  );
   
   
   constructor( public buildForm : FormBuilder) { }
@@ -29,9 +32,17 @@ export class RegistrationFormComponent implements OnInit {
   get pswd() {return this.reactiveForm.controls['pswd']}
   get mail() {return this.reactiveForm.controls['mail']}
   get tel() {return this.reactiveForm.controls['tel']}
+  get aliases() {return this.reactiveForm.controls['aliases'] as FormArray;}
 
   submitForm()
   {
-    console.log(this.reactiveForm)
+    if(this.accept) console.log(this.reactiveForm.value)
   }
+
+  addAlias() 
+  { 
+    this.aliases.push(this.buildForm.control(''));
+  }
+
+  acceptSubmit() { this.accept=true; }
 }

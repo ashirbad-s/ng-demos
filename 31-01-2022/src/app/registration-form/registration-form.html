@@ -1,6 +1,6 @@
 <div class="container-fluid border col-md-6">
     <div class="mb-3">
-        <form class="form-group" [formGroup]="reactiveForm" (ngSubmit)="submitForm()">
+        <form class="form-group" [formGroup]="reactiveForm">
            
             <div class="form-floating mb-4">
                 <input 
@@ -23,7 +23,6 @@
                
                 <small 
                 class="text-danger" 
-                
                 *ngIf="usrnm.errors?.['pattern']">
                     Multiple Spaces, Numbers, Special Characters or Spaces in the Beginning and End not allowed
                 </small>
@@ -84,12 +83,35 @@
                     EMail is not valid
                 </small>
             </div>
+
+            <div formArrayName="aliases">
+                <button 
+                (click)="addAlias()" 
+                type="button"
+                class="btn btn-default mb-3">
+                    Add another EMail
+                </button>
+              
+                <div *ngFor="let alias of aliases.controls; let i=index" class="form-floating mb-4">
+                    <input 
+                    id="alias-{{ i }}" 
+                    type="text" 
+                    [formControlName]="i"
+                    placeholder="EMail"
+                    class="form-control">
+                    <label for="alias-{{ i }}">Alternative EMail</label>
+                </div>
+            </div>
         
+            <ng-template *ngIf="usrnm.valid" acceptSubmit()></ng-template>
+
             <button 
             class="btn btn-primary mb-3" 
             [disabled]="reactiveForm.invalid"
             [class.disabled]="reactiveForm.invalid"
-            [class.active]="reactiveForm.valid">
+            [class.active]="reactiveForm.valid"
+            (click)="submitForm()"
+            >
                 Submit
             </button>
         </form>        
