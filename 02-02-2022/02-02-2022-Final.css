@@ -1,0 +1,70 @@
+/* FONTS */
+.comforter /*https://fonts.google.com/specimen/Comforter*/
+{ font-family: 'Comforter', cursive; }
+
+.acme /*https://fonts.google.com/specimen/Acme*/
+{ font-family: 'Acme', sans-serif; }
+
+.cinzel /*https://fonts.google.com/specimen/Cinzel*/
+{ font-family: 'Cinzel', serif; }
+
+.kaushan /*https://fonts.google.com/specimen/Kaushan+Script*/
+{ font-family:'Kaushan', cursive }
+
+
+
+*
+{
+    font-family:kaushan;
+    font-size: large;
+}
+
+.box
+{
+    margin-left:8%;
+    margin-top: 10%;
+    border:10px solid #000000;
+    width:80%;
+    display: block;
+    background-color: beige;
+    border-radius: 3px;
+    border-top-right-radius: 10% 30%;
+}
+
+h1
+{
+    font-family:Acme;
+}
+
+.box h1
+{
+    display: block;
+    text-align: center;
+    width:10%;
+    font-size:60px;
+    margin:2%;
+    background-color:beige;
+
+}
+
+.lorem
+{
+    margin:10%
+}
+
+.invisible
+{
+    display:none;  
+    border-radius:2px solid rebeccapurple;
+}
+
+.hoverVisible
+{
+    cursor: pointer;
+    width:auto;
+}
+
+.hoverVisible:hover .invisible
+{
+    display: block;    
+}
