@@ -1,6 +1,11 @@
-.demo-table 
+.demo-table
 {
   margin-left:10%;
   width: 50%;
+  cursor:pointer;
 }
 
+.card
+{
+  width: 40%;
+}
