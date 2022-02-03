@@ -1,0 +1,174 @@
+* { margin:0; }
+
+body
+{
+    background-color: black;
+    color:white;
+}
+
+/* NavBar */
+nav
+{
+    background-color : turquoise; 
+    width: 100%;
+    display: inline-block; 
+    margin:0;
+    background: linear-gradient(to right,darkturquoise, cornflowerblue, steelblue) center;
+}
+
+nav ul
+{   
+    padding:0; 
+    list-style-type:none;   
+}
+
+nav ul li a
+{
+    list-style-type: none;
+    width:10%;  
+    padding:20px;
+    float:left; 
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition:0.2s;
+}
+
+nav ul li a:hover
+{
+    font-size:medium;
+    background-color: #4141d8;
+    opacity:0.7;
+    transition:0.2s;
+    color:floralwhite;
+    border-radius:2px;
+    text-shadow:2px black;
+}
+
+
+/* Sign Up */
+.form
+{
+    margin-left: 5%;
+    margin-right:5%;
+    margin-top:5%;
+    width: 90%;
+}
+
+.form-input
+{
+    width:100%;
+    margin-bottom: 5%;
+    height: 60px;
+    font-size:18px;
+    border-radius: 7px;
+    padding-left:5%;
+    font-family:cursive;
+    outline:0;
+    border:none;
+}
+
+.form-input:focus
+{
+    cursor:auto;
+    transition:0.3s;
+    font-family:cursive;
+    font-size:xx-large;
+}
+
+.form-input:not(:focus)
+{
+    transition:0.5s;
+}
+
+
+.submit
+{
+    height: 35px;
+    width:100px;
+    margin-bottom:2%;
+    border-radius:5px;
+    color:white;
+    background-color:royalblue;
+    cursor:pointer;
+    font-size:medium;
+    border:0;
+    transition:0.6s;
+    font-family:serif;
+}
+
+.submit:hover, .submit:focus
+{
+    border:0.2px solid cyan;
+    transition:0.6s;
+    color:whitesmoke;
+    text-shadow:3px cyan;
+}
+
+fieldset
+{
+    display:inline;
+    margin-left: 25%;
+    margin-right:15%;
+    margin-top:5%;
+    width:50%;
+}
+
+legend
+{
+    font-family:"Bangers",cursive;
+    font-size:95px;
+    color:snow;
+}
+
+.form-label
+{
+    position: absolute;
+	top: 20px;
+	left:20px;
+	color: grey;
+	cursor: text;
+    font-family:cursive;
+}
+
+.form-row
+{
+    position:relative;
+    margin-top:25px;
+    margin-bottom:20px;
+}
+
+.form-input:focus ~ .form-label , .form-input:valid ~ .form-label
+{
+    top:-20px;
+    left:0;
+    color:white;
+    font-family:serif;
+    transition:0.3s ;
+}
+
+:not(.form-input:focus ~ .form-label)
+{
+    transition:0.3s;
+}
+
+/* Products */
+.white-bar
+{
+    background-color: snow;
+    width:12px;
+    height:92%;
+    margin-left:49%;
+    margin-right:49%
+}
+
+.card
+{
+    /* width:100%; */
+    font-family:"Kaushan Script", cursive;
+    margin-left:28%;
+    margin-top:15%;
+    font-size:64px;
+    color:red;
+
+}
