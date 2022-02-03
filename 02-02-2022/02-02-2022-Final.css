@@ -1,21 +1,17 @@
 /* FONTS */
-.comforter /*https://fonts.google.com/specimen/Comforter*/
-{ font-family: 'Comforter', cursive; }
+/* comforter https://fonts.google.com/specimen/Comforter*/
 
-.acme /*https://fonts.google.com/specimen/Acme*/
-{ font-family: 'Acme', sans-serif; }
+/*acme https://fonts.google.com/specimen/Acme*/
 
-.cinzel /*https://fonts.google.com/specimen/Cinzel*/
-{ font-family: 'Cinzel', serif; }
+/*cinzel https://fonts.google.com/specimen/Cinzel*/
 
-.kaushan /*https://fonts.google.com/specimen/Kaushan+Script*/
-{ font-family:'Kaushan', cursive }
+/*kaushan https://fonts.google.com/specimen/Kaushan+Script*/
 
 
 
 *
 {
-    font-family:kaushan;
+    font-family:'Kaushan Script',cursive;
     font-size: large;
 }
 
@@ -29,6 +25,7 @@
     background-color: beige;
     border-radius: 3px;
     border-top-right-radius: 10% 30%;
+    box-shadow:20px 20px 20px black;
 }
 
 h1
@@ -43,8 +40,15 @@ h1
     width:10%;
     font-size:60px;
     margin:2%;
-    background-color:beige;
+    transition:0.5s;
+}
 
+.box h1:hover
+{
+	text-shadow:2px 2px black;
+	color:tomato;
+	cursor:pointer;
+	transition:0.5s;
 }
 
 .lorem
@@ -56,15 +60,32 @@ h1
 {
     display:none;  
     border-radius:2px solid rebeccapurple;
+    text-shadow:1px 1px ;
+    font-size:40px;
+    font-family:'Comforter',cursive;	 
 }
 
 .hoverVisible
 {
     cursor: pointer;
-    width:auto;
+    width:50%;
 }
 
 .hoverVisible:hover .invisible
 {
     display: block;    
+}
+
+.img-box
+{
+	float:right;
+	opacity:0.4;
+	transition:1s;
+}
+
+.img-box:hover
+{
+	opacity:1;
+	transform:rotate(15deg);
+	transition:1s;
 }
