@@ -1,0 +1,32 @@
+main
+{
+    width: 80%;
+    margin-left:10%;
+    margin-right:5%;
+    display:inline-block;
+}
+
+/* Header Components */
+.header
+{
+    background-color:#E9ECEF;
+    margin-top:1%;
+    padding:1%;
+    border-radius:3px;
+    margin-bottom:1%;
+}
+
+.header a
+{
+    background-color:inherit;
+    display:inline-block;
+    margin-left:2%;
+    margin-right:2%;
+    text-decoration:none;
+    color:#0077FF;
+}
+
+.active
+{
+    color:#7D858D;
+}

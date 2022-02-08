@@ -1,0 +1,56 @@
+.user-details
+{
+    background-color:white;
+    height:50%;
+    width:100%;
+    border-radius:5px;
+    display:inline-block;
+    margin-bottom:0.5%;
+    box-shadow:1px 1px 1px 1px gray;
+}
+
+/* User-Details Classes */
+.user-details-row
+{
+    display:inherit;
+    padding:3%;
+    background-color: inherit;
+    width:94%;
+    border-radius:inherit;
+}
+
+.user-details-row:hover
+{
+    background-color: rgb(167, 185, 204);
+}
+
+.user-details hr
+{
+    border:0.1px solid lightgray;
+    width:93%;
+    height:0.1px;
+    align-items: center;
+    margin-left:2%;
+    margin-top:0%;
+    margin-bottom:0%;
+    margin-right:0%;
+
+}
+
+.heading
+{
+    font-size:20px;
+    font-weight:bold;
+    text-align: left;
+    width:40%;
+    float:left;
+    background-color:inherit;
+}
+
+.value
+{
+    text-align:left;
+    display: inherit;
+    color:#7D858D;
+    background-color:inherit;
+}

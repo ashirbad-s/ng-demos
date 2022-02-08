@@ -1,0 +1,57 @@
+.dashboard
+{
+    background-color:white;
+    border-radius: 5px;
+    text-align: center;
+    border-radius:5px;
+    margin-bottom:6.5%;
+    box-shadow:1px 1px 1px 1px gray;
+    margin-top:0;
+}
+
+/* Dashboard Classes */
+.dashboard img
+{
+    border-radius:50%;
+    margin:5%;
+    background-color: white;;
+}
+
+.name, strong
+{
+    margin:2%;
+    font-size:150%;
+    background-color: inherit;
+}
+
+.work-details
+{
+    background-color:inherit;
+    margin-bottom:4%;
+    color:#7D858D;
+}
+
+.work-details br
+{
+    margin:1%;
+}
+
+.dashboard button
+{
+    margin:5%;
+    background-color:inherit;
+    color:#007BFF;
+    border:2px solid #007BFF;
+    border-radius: inherit;
+    padding-top:3%;
+    padding-bottom:3%;
+    padding-left:5%;
+    padding-right:5%;
+    font-size: 15px;
+}
+
+.dashboard button:focus
+{
+    color:white;
+    background-color:#007BFF;
+}

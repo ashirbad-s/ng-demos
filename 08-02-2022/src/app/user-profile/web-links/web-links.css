@@ -1,0 +1,43 @@
+.web-links
+{
+    background-color:white;
+    border-radius:5px;
+    box-shadow:1px 1px 1px 1px gray;
+}
+
+/* Web-Links Classes */
+.websites
+{
+    background-color:inherit;
+    padding:2%;
+    display:inherit;
+    border-radius:inherit;
+    bottom:50%;   
+}
+
+.websites:hover
+{
+    background-color:lightgray;
+    cursor:pointer;
+}
+
+.web-links .iconify-inline
+{
+    background-color: inherit;
+    padding:0;
+    width:5%;
+}
+
+.web-links .weblinks
+{
+    background-color:inherit;
+    float:right;
+    color:#7D858D;;
+}
+
+.web-links hr
+{
+    height: 1px;
+    margin:0;
+    border:none;
+}
