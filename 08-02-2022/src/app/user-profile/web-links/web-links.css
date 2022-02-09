@@ -2,17 +2,18 @@
 {
     background-color:white;
     border-radius:5px;
-    box-shadow:1px 1px 1px 1px gray;
+    box-shadow:1px 1px 1px 1px lightgray;
+    margin-bottom:5%;
+    margin-top:5%;
 }
 
 /* Web-Links Classes */
 .websites
 {
     background-color:inherit;
-    padding:2%;
+    padding:4%;
     display:inherit;
     border-radius:inherit;
-    bottom:50%;   
 }
 
 .websites:hover
@@ -25,7 +26,7 @@
 {
     background-color: inherit;
     padding:0;
-    width:5%;
+    width:10%;
 }
 
 .web-links .weblinks

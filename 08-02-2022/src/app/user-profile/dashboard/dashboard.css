@@ -4,16 +4,18 @@
     border-radius: 5px;
     text-align: center;
     border-radius:5px;
-    margin-bottom:6.5%;
-    box-shadow:1px 1px 1px 1px gray;
+    margin-bottom:6%;
+    box-shadow:1px 1px 1px 1px lightgray;
     margin-top:0;
+    padding-top:5%;
+    padding-bottom:3%;
 }
 
 /* Dashboard Classes */
 .dashboard img
 {
     border-radius:50%;
-    margin:5%;
+    margin:3%;
     background-color: white;;
 }
 
@@ -33,21 +35,22 @@
 
 .work-details br
 {
-    margin:1%;
+    margin:1.5%;
 }
 
 .dashboard button
 {
-    margin:5%;
+    margin-bottom:4%;
+    margin-right:1%;
+    margin-left:1%;
+    margin-top:3%;
     background-color:inherit;
     color:#007BFF;
-    border:2px solid #007BFF;
+    border:1px solid #007BFF;
     border-radius: inherit;
-    padding-top:3%;
-    padding-bottom:3%;
-    padding-left:5%;
-    padding-right:5%;
-    font-size: 15px;
+    padding:2%;
+    font-size: 100%;
+    cursor:pointer;
 }
 
 .dashboard button:focus

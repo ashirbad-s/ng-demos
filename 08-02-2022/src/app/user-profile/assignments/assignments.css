@@ -10,13 +10,13 @@
 .assignment-project
 {
     margin-top:0.5%;
-    width: 45%;
+    width: 46%;
     background-color:white;
     display:inherit;
     border-radius:inherit;
     padding-left:3%;
     padding-bottom:3%;
-    box-shadow:1px 1px 1px 1px gray;
+    box-shadow:1px 1px 1px 1px lightgray;
 }
 
 /* Assignment-Project Components */
@@ -24,26 +24,27 @@
 {
     background-color: inherit;
     width:100%;
-    margin-top:3%;
-    margin-bottom:2%;
+    margin-top:4%;
+    margin-bottom:4%;
     display:inherit;
+    font-weight:600;
 }
 
-.progressBar
+.progress-row
 {
-    margin-top:4%;
     width:100%;
     background-color:inherit;
-    margin-bottom:5%;
+    margin-bottom:4%;
 }
 
 progress
 {
     border-radius:6px;
-    height:10px;
+    height:5px;
     width:90%;
-    background-color: lightgray;
+    background-color: #E9ECEF;
     border:none;
+    margin:0;
 }
 
 progress::-moz-progress-bar                            /* using GeeksForGeeks https://www.geeksforgeeks.org/how-to-set-color-of-progress-bar-using-html-and-css/ */
@@ -53,13 +54,10 @@ progress::-moz-progress-bar                            /* using GeeksForGeeks ht
     border-bottom-left-radius:6px;
 }
 
-label
+.progress-row label
 {
     background-color:inherit;
+    font-size:15px;    
 }
 
-.title div
-{  
-    background-color:inherit;
-}
 

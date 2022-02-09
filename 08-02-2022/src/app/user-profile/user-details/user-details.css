@@ -6,43 +6,44 @@
     border-radius:5px;
     display:inline-block;
     margin-bottom:0.5%;
-    box-shadow:1px 1px 1px 1px gray;
+    box-shadow:1px 1px 1px 1px lightgray;
 }
 
 /* User-Details Classes */
 .user-details-row
 {
     display:inherit;
-    padding:3%;
+    padding:2.75%;
     background-color: inherit;
-    width:94%;
+    width:93%;
     border-radius:inherit;
+    font-size:18px;
 }
 
 .user-details-row:hover
 {
     background-color: rgb(167, 185, 204);
+    cursor:pointer;
+    width:94.5%;
 }
 
 .user-details hr
 {
-    border:0.1px solid lightgray;
+    border:0.2px solid lightgray;
     width:93%;
-    height:0.1px;
+    height:0.2px;
     align-items: center;
     margin-left:2%;
     margin-top:0%;
     margin-bottom:0%;
     margin-right:0%;
-
 }
 
 .heading
 {
-    font-size:20px;
-    font-weight:bold;
+    font-weight:500;
     text-align: left;
-    width:40%;
+    width:30%;
     float:left;
     background-color:inherit;
 }
