@@ -1,0 +1,55 @@
+<div class="user-details">
+
+    <div class="user-details-row">
+        <div class="heading">
+            Full Name
+        </div>
+        <div class="value">              
+            {{db[id]["fullname"]}}
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="user-details-row">
+        <div class="heading">
+            Email
+        </div>
+        <div class="value">              
+            {{db[id]["email"]}}
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="user-details-row">
+        <div class="heading">
+            Phone
+        </div>
+        <div class="value">              
+            ({{db[id]["phone"][0]}}) {{db[id]["phone"][1]}}-{{db[id]["phone"][2]}}
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="user-details-row">
+        <div class="heading">
+            Mobile
+        </div>
+        <div class="value">              
+            ({{db[id]["mobile"][0]}}) {{db[id]["mobile"][1]}}-{{db[id]["mobile"][2]}}
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="user-details-row">
+        <div class="heading">
+            Address
+        </div>
+        <div class="value">
+            {{db[0]["address"]}}
+        </div>
+    </div>
+</div>

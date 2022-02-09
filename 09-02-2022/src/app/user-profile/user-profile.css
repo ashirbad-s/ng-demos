@@ -1,0 +1,15 @@
+.left-container
+{
+    width:30%;
+    margin-right:1%;
+    border-radius:5px;
+    display:inline-block;
+}
+
+.right-container
+{
+    width:65%;
+    margin-left:1%;
+    border-radius:5px;
+    display:inline-block;
+}
